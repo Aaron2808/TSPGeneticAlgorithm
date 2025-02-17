@@ -7,7 +7,9 @@ The algorithm follows these steps:
 
 3.Evaluate Fitness: Calculates the total distance for each route.
 
-4.Selection & Crossover: Uses tournament selection and crossover techniques (PMX or Order Crossover) to create new solutions.
+4.Selection: Uses elitism for selection
+
+5.Crossover: Can use Partially Mapper Crossover or Order Crossover to create new solutions.
 
 5.Mutation: Applies inversion or swap mutation to introduce variability.
 
@@ -30,6 +32,7 @@ Parameters:
 4) crossoverRate: Probability of crossover.
 5) mutationRate: Probability of mutation.
 6) elitism: Number of best solutions carried to the next generation.
+7) drawPlot: True or False, if you want to plot the fitness over generations.
 
 Output
 The program prints:
@@ -58,9 +61,9 @@ Modify these lists in the script to adjust the search space:
 1) populationSize = [700, 1000, 1200]
 2) crossoverRate = [0.5, 0.8, 0.9]
 3) mutationRate = [0.2, 0.5, 0.8]
-4) tournamentSize = [10]
-5) generations = 100
-6) elitism = 2
+4) generations = 100
+5) elitism = 2
+6) drawPlot = false (Disables plotting during gridSearch)
 
 Notes
 1. Ensure that your TSP file follows the standard TSPLIB format.
